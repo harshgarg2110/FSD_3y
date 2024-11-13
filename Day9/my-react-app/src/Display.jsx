@@ -1,18 +1,4 @@
-// import React from 'react'
-// import Marks from './Marks'
-// const Displaymarks = () => {
-//     const students=[{name:'Harsh', roll: 32423, m1:98, m2:83, m3:99},
-        
 
-//     ]
-//   return (
-//     <div>
-//       <Marks name={"harshgarg"} roll={135} m1={98} m2={89} m3={98} />
-//     </div>
-//   )
-// }
-
-// export default Displaymarks;
 import React from "react";
 import Marks from "./Marks";
 

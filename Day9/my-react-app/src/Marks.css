@@ -1,11 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 h1 {
     background-color: aqua;
+    border-radius: 2px;
   }
   h2 {
     background-color: cadetblue;
+    border-radius: 2px;
   }
   #disp {
     background-color: black;
-    border: 10px solid greenyellow;
-    border-radius: 10px;
+    border: 5px solid greenyellow;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
