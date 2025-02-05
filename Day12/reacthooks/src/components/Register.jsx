@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-const Register = () => {
+import { useNavigate } from "react-router-dom";
+const Register = ({ regData }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  const [password, setPasssword] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
   const data = { name, email, password };
 
+  const handleRegister = (e) => {
+    e.preventDefault();
+    alert("User Registered Successfully");
+    regData(data);
+    navigate("/login");
+  };
   return (
     <div>
-      {/* {name}
-
-      {email} */}
       {JSON.stringify(data)}
-
       <form>
         <div className="form-group">
           <label>Name</label>
@@ -37,14 +40,14 @@ const Register = () => {
           <label>Password</label>
           <input
             type="password"
-            onChange={(e) => setPasssword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             className="form-control"
             id="exampleInputPassword1"
             placeholder="Password"
           />
         </div>
-
-        <button type="submit" className="btn btn-primary">
+        <br />
+        <button onClick={handleRegister} className="btn btn-primary">
           Submit
         </button>
       </form>
